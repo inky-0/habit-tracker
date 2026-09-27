@@ -13,10 +13,35 @@
 
   <main>
     <!-- Auth screen (register / log in) -->
-    <section id="auth-view"></section>
+    <section id="auth-view" class="card">
+      <div class="tabs">
+        <button id="show-login" class="tab active" type="button">Log in</button>
+        <button id="show-register" class="tab" type="button">Register</button>
+      </div>
+
+      <form id="login-form">
+        <label>Username <input id="login-username" required autocomplete="username"></label>
+        <label>Password <input id="login-password" type="password" required autocomplete="current-password"></label>
+        <button type="submit" class="primary">Log in</button>
+      </form>
+
+      <form id="register-form" hidden>
+        <label>Username <input id="register-username" required autocomplete="username"></label>
+        <label>Email <input id="register-email" type="email" required autocomplete="email"></label>
+        <label>Password <input id="register-password" type="password" required minlength="6" autocomplete="new-password"></label>
+        <button type="submit" class="primary">Create account</button>
+      </form>
+
+      <p id="auth-error" class="error" hidden></p>
+    </section>
 
     <!-- Habits screen (shown after log in) -->
-    <section id="habits-view" hidden></section>
+    <section id="habits-view" hidden>
+      <div class="topbar">
+        <p>Logged in as <strong id="current-username"></strong></p>
+        <button id="logout-button" type="button">Log out</button>
+      </div>
+    </section>
   </main>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/parse/5.3.0/parse.min.js"></script>

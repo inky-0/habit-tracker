@@ -1,8 +1,6 @@
 // Habit Tracker app logic
-// Uses the Parse JavaScript SDK to talk to the Back4App backend.
-
-Parse.initialize(BACK4APP_APP_ID, BACK4APP_JS_KEY);
-Parse.serverURL = "https://parseapi.back4app.com/";
+// Handles register / log in / log out. (Parse is initialized in habits.js,
+// which loads first.)
 
 // ----- Page elements -----
 const authView = document.getElementById("auth-view");
@@ -26,6 +24,7 @@ function showHabitsScreen(user) {
   authView.hidden = true;
   habitsView.hidden = false;
   currentUsername.textContent = user.getUsername();
+  loadHabits();
 }
 
 function showAuthError(message) {

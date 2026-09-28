@@ -4,7 +4,7 @@ A simple web app for building good habits. Create an account, add the habits you
 
 **Live app:** https://habit-tracker2094.netlify.app/
 
-**Demo video:** _YouTube link coming soon_
+**Demo video:** https://youtu.be/8wr9fIHbovg
 
 ## What the app does
 
